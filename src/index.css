@@ -1,0 +1,217 @@
+@import '@fontsource/inter/400.css';
+@import '@fontsource/inter/500.css';
+@import '@fontsource/inter/600.css';
+@import '@fontsource/inter/700.css';
+@import '@fontsource/space-grotesk/500.css';
+@import '@fontsource/space-grotesk/600.css';
+@import '@fontsource/space-grotesk/700.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Premium SaaS Color System */
+    --background: 210 20% 98%;
+    --foreground: 222 47% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    /* Deep Indigo Primary - Trust & Authority */
+    --primary: 234 89% 54%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 234 89% 64%;
+
+    /* Subtle Secondary */
+    --secondary: 220 14% 96%;
+    --secondary-foreground: 222 47% 11%;
+
+    /* Muted Tones */
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 9% 46%;
+
+    /* Vibrant Cyan Accent */
+    --accent: 174 72% 46%;
+    --accent-foreground: 0 0% 100%;
+    --accent-glow: 174 72% 56%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 234 89% 54%;
+
+    --radius: 0.75rem;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(234 89% 54%), hsl(234 89% 64%));
+    --gradient-accent: linear-gradient(135deg, hsl(174 72% 46%), hsl(174 72% 56%));
+    --gradient-hero: linear-gradient(180deg, hsl(220 20% 98%) 0%, hsl(220 30% 96%) 100%);
+    --gradient-card: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(220 20% 99%) 100%);
+    --gradient-mesh: radial-gradient(at 40% 20%, hsl(234 89% 95%) 0px, transparent 50%), 
+                     radial-gradient(at 80% 0%, hsl(174 72% 95%) 0px, transparent 50%),
+                     radial-gradient(at 0% 50%, hsl(234 89% 98%) 0px, transparent 50%);
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(222 47% 11% / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(222 47% 11% / 0.1), 0 2px 4px -2px hsl(222 47% 11% / 0.1);
+    --shadow-lg: 0 10px 15px -3px hsl(222 47% 11% / 0.1), 0 4px 6px -4px hsl(222 47% 11% / 0.1);
+    --shadow-xl: 0 20px 25px -5px hsl(222 47% 11% / 0.1), 0 8px 10px -6px hsl(222 47% 11% / 0.1);
+    --shadow-glow: 0 0 40px hsl(234 89% 54% / 0.15);
+    --shadow-accent-glow: 0 0 40px hsl(174 72% 46% / 0.2);
+
+    /* Sidebar */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 234 89% 54%;
+
+    /* Tool-specific colors */
+    --tool-meta: 234 89% 54%;
+    --tool-robots: 174 72% 46%;
+    --tool-sitemap: 262 83% 58%;
+    --tool-links: 24 95% 53%;
+    --tool-schema: 142 71% 45%;
+    --tool-redirect: 346 77% 50%;
+  }
+
+  .dark {
+    --background: 222 47% 6%;
+    --foreground: 210 40% 98%;
+
+    --card: 222 47% 8%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222 47% 8%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 234 89% 64%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 234 89% 74%;
+
+    --secondary: 222 47% 12%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 222 47% 12%;
+    --muted-foreground: 220 9% 60%;
+
+    --accent: 174 72% 56%;
+    --accent-foreground: 0 0% 100%;
+    --accent-glow: 174 72% 66%;
+
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 222 47% 15%;
+    --input: 222 47% 15%;
+    --ring: 234 89% 64%;
+
+    --gradient-primary: linear-gradient(135deg, hsl(234 89% 54%), hsl(234 89% 64%));
+    --gradient-accent: linear-gradient(135deg, hsl(174 72% 46%), hsl(174 72% 56%));
+    --gradient-hero: linear-gradient(180deg, hsl(222 47% 6%) 0%, hsl(222 47% 8%) 100%);
+    --gradient-card: linear-gradient(135deg, hsl(222 47% 10%) 0%, hsl(222 47% 8%) 100%);
+    --gradient-mesh: radial-gradient(at 40% 20%, hsl(234 89% 20% / 0.3) 0px, transparent 50%), 
+                     radial-gradient(at 80% 0%, hsl(174 72% 20% / 0.3) 0px, transparent 50%),
+                     radial-gradient(at 0% 50%, hsl(234 89% 15% / 0.3) 0px, transparent 50%);
+
+    --shadow-glow: 0 0 40px hsl(234 89% 54% / 0.25);
+    --shadow-accent-glow: 0 0 40px hsl(174 72% 46% / 0.3);
+
+    --sidebar-background: 222 47% 6%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 234 89% 64%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 222 47% 12%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 222 47% 15%;
+    --sidebar-ring: 234 89% 64%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    @apply font-semibold tracking-tight;
+  }
+}
+
+@layer components {
+  .gradient-text {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-primary);
+  }
+
+  .gradient-text-accent {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-accent);
+  }
+
+  .card-elevated {
+    @apply bg-card rounded-xl border border-border/50;
+    box-shadow: var(--shadow-md);
+    background-image: var(--gradient-card);
+  }
+
+  .card-elevated-lg {
+    @apply bg-card rounded-2xl border border-border/50;
+    box-shadow: var(--shadow-lg);
+    background-image: var(--gradient-card);
+  }
+
+  .glow-primary {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .glow-accent {
+    box-shadow: var(--shadow-accent-glow);
+  }
+
+  .mesh-background {
+    background-image: var(--gradient-mesh);
+  }
+
+  .hero-gradient {
+    background-image: var(--gradient-hero);
+  }
+}
+
+@layer utilities {
+  .animation-delay-100 {
+    animation-delay: 100ms;
+  }
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+  .animation-delay-300 {
+    animation-delay: 300ms;
+  }
+  .animation-delay-400 {
+    animation-delay: 400ms;
+  }
+  .animation-delay-500 {
+    animation-delay: 500ms;
+  }
+}
