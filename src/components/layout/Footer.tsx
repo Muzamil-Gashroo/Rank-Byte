@@ -155,9 +155,6 @@ const Footer = () => {
           <p className="text-sm text-muted-foreground">
             © {new Date().getFullYear()} SEOTools. All rights reserved.
           </p>
-          <p className="text-sm text-muted-foreground">
-            Built with ❤️ for the SEO community
-          </p>
         </div>
       </div>
     </footer>
