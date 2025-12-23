@@ -31,7 +31,7 @@ const App = () => (
             <Route path="/tools/robots-checker" element={<RobotsChecker />} />
             <Route path="/tools/schema-generator" element={<SchemaGenerator />} />
             <Route path="/blog" element={<Blog />} />
-            <Route path="/api/docs" element={<ApiDocs />} />
+            {/* <Route path="/api/docs" element={<ApiDocs />} /> */}
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
